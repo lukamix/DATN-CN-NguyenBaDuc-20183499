@@ -1,7 +1,7 @@
 Oper project:
--Cài đặt react native trên máy
--Clone project
--Vào thư mục project mở terminal
+  -Cài đặt react native trên máy
+  -Clone project
+  -Vào thư mục project mở terminal
   +gõ code . để mở bằng visual code
   +mở terminal trên visual code gõ : npm install
 
