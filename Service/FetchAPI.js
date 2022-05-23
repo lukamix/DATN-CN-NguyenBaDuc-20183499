@@ -5,13 +5,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const FetchAPI = {};
 
 FetchAPI.post = async (route, res) => {
-  var token = await AsyncStorage.getItem("id_token");
   return fetch(route, {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      authorization: "token " + token
     },
     body: JSON.stringify(res),
   })
@@ -27,16 +25,12 @@ FetchAPI.post = async (route, res) => {
 };
 
 FetchAPI.get = async (route) => {
-  var token = await AsyncStorage.getItem("id_token");
   // console.log(token)
   return fetch(route, {
     method: "GET",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-
-      // body: JSON.stringify(res),
-      authorization: "token " + token,
     },
   })
     .then((response) => {
