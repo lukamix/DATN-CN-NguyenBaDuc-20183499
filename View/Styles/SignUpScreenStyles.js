@@ -1,0 +1,124 @@
+"use strict";
+import { StyleSheet } from "react-native";
+
+module.exports = StyleSheet.create({
+    container:{
+        width:100+"%",
+        height:100+"%",
+        alignItems:'center',
+        backgroundColor:"#FFFFFF",
+    },
+    logo_container:{
+        width:100+"%",
+        height:240,
+        alignItems:'center',
+        justifyContent:'space-evenly',
+    },
+    logo_image:{
+        width:150,
+        height:150,
+        borderRadius:300,
+    },
+    signup_text:{
+        fontFamily:'mainfont',
+        fontSize:24,
+        color:'black',
+    },
+    input_container:{
+        width:100+"%",
+        height:225,
+        alignItems:'center',
+        justifyContent:'space-evenly',
+    },
+    email_input:{
+        fontFamily:'mainfont',
+        fontSize:22,
+        width:80+"%",
+        height:50,
+        padding: 14,
+        borderBottomColor:'#696969',
+        borderBottomWidth:0.5,
+    },
+    password_container:{
+        width: 80+"%",
+        height:50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderBottomColor:'#696969',
+        borderBottomWidth:0.5,
+    },
+    password_input:{
+        fontFamily:'mainfont',
+        width:90+"%",
+        height:50,
+        padding: 14,
+        fontSize: 22,
+    },
+    eye_icon_container:{
+        width:22,
+        height:22,
+    },
+    eye_icon:{
+        width:22,
+        height:22,
+    },
+    alert_box:{
+        width: 80+"%",
+    },
+    alert_text:{
+        paddingLeft:10,
+        color:'#FF0000',
+        fontSize:14,
+        fontFamily:'mainfont',
+    },
+    choose_role_checkbox:{
+        width:80+"%",
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-evenly',
+    },
+    role_checkbox:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    checkbox_text:{
+        fontFamily:'mainfont',
+        fontSize:22,
+        color:'#000000',
+    },
+    signup_button_container:{
+        width:100+"%",
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    signup_button:{
+        width:120,
+        height:40,
+        backgroundColor:'#FF0505',
+        borderRadius:20,
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    signup_button_text:{
+        fontFamily:'mainfont',
+        color:'white',
+        fontSize:18,
+    },
+    recommend_container:{
+        width:100+"%",
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    recommend_text:{
+        fontFamily:'mainfont',
+        color:"black",
+        fontSize:18,
+    },
+    recommend_text_clickable:{
+        fontFamily:'mainfont',
+        color:"#FF5C00",
+        fontSize:18,
+    },
+});
