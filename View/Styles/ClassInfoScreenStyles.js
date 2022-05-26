@@ -16,7 +16,6 @@ module.exports = StyleSheet.create({
         flexDirection:'row',
         borderColor:MAIN_COLOR,
         borderWidth:0.5,
-        justifyContent:'space-between',
         alignItems:'center',
     },
     header_icon:{
@@ -24,13 +23,18 @@ module.exports = StyleSheet.create({
         height:36,
     },
     header_menu:{
+        width:24,
+        height:36,
+        position:'absolute',
+        zIndex:999,
+        top:30,
+        left:20,
         borderWidth:1,
         borderColor:'#F81C00',
-        marginLeft:20,
-        marginTop:30,
     },
     header_info:{
-        marginRight:5,
+        position:'absolute',
+        right:5,
         flexDirection:'row',
         alignItems:'center',
     },
@@ -50,47 +54,5 @@ module.exports = StyleSheet.create({
     header_text_MSSV:{
         color:"#F81C00",
         fontSize:14,
-    },
-    body:{
-        width:"100%",
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    box:{
-        width:"100%",
-        alignItems:'center',
-        flexDirection:'row',
-    },
-    box_item:{
-        alignItems:'center',
-        justifyContent:'center',
-        width:"50%",
-        aspectRatio: 1,
-    },
-    icon_item:{
-        width:"70%",
-        height:"70%",
-    },
-    item_name_text:{
-        fontWeight:'bold',
-        fontSize:16,
-        color:'#000000',
-        paddingTop:10,
-    },
-    item_name_info:{
-        fontSize:15,
-        width:150,
-        textAlign:'center',
-    },
-    touch_area:{
-        backgroundColor:'white',
-        width:100,
-        height:100,
-        borderWidth:2,
-        borderColor:'#F81C00',
-        borderRadius:30,
-        alignItems:'center',
-        justifyContent:'center',
     },
 });

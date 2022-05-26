@@ -5,6 +5,7 @@ import {
     View,
     Image,
   } from 'react-native';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 const styles = require("../Styles/SignInScreenStyles.js")
@@ -76,7 +77,9 @@ class SignInScreen extends Component{
                     onPress={
                         ()=>{
                             //TODO: Call API Login here !
-                            this.props.navigation.navigate("HomeScreen");
+                            this.props.navigation.navigate("TabScreen",{
+                                role:this.state.rightRole,
+                            });
                         }
                     }>
                         <Text style={styles.signin_button_text}>Sign In</Text>

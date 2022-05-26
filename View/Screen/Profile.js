@@ -15,7 +15,6 @@ const generateBoxShadowStyle = (
     shadowColorIos,
     shadowOpacity,
     shadowRadius,
-    elevation,
     shadowColorAndroid,
   ) => {
     if (Platform.OS === 'ios') {
@@ -27,7 +26,6 @@ const generateBoxShadowStyle = (
       };
     } else if (Platform.OS === 'android') {
       styles.boxShadow = {
-        elevation,
         shadowColor: shadowColorAndroid,
       };
     }

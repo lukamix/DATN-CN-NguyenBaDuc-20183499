@@ -16,7 +16,6 @@ module.exports = StyleSheet.create({
         flexDirection:'row',
         borderColor:MAIN_COLOR,
         borderWidth:0.5,
-        justifyContent:'space-between',
         alignItems:'center',
     },
     header_icon:{
@@ -24,13 +23,18 @@ module.exports = StyleSheet.create({
         height:36,
     },
     header_menu:{
+        width:24,
+        height:36,
+        position:'absolute',
+        zIndex:999,
+        top:30,
+        left:20,
         borderWidth:1,
         borderColor:'#F81C00',
-        marginLeft:20,
-        marginTop:30,
     },
     header_info:{
-        marginRight:5,
+        position:'absolute',
+        right:5,
         flexDirection:'row',
         alignItems:'center',
     },
@@ -49,8 +53,8 @@ module.exports = StyleSheet.create({
     },
     header_text_MSSV:{
         color:"#F81C00",
+        fontSize:14,
     },
-    
     body:{
         width:"100%",
         flex:1,
@@ -62,19 +66,17 @@ module.exports = StyleSheet.create({
         width:"100%",
     },
     item:{
-        borderWidth:0.5,
-        borderColor:"#CCCCCC",
         borderRadius:30,
         width:"100%",
         height:90,
-        backgroundColor: '#EFEFFF',
+        backgroundColor: '#E0FFFF',
         padding: 20,
         justifyContent:'center',
         marginBottom:5,
     },
     item_horizontal:{
         flexDirection:'row',
-        alignItems:'center',
+        justifyContent:'space-evenly',
     },
     class_image_view:{
         backgroundColor:'#FFFFFF',
@@ -90,13 +92,39 @@ module.exports = StyleSheet.create({
         borderRadius:25,
     },
     item_vertical_not_align:{
-        marginLeft:10,
-        height:60,
-        flex:1,
+
     },
-    notification_text:{
-        fontSize:15,
-        color:'#777777',
+    item_vertical:{
+        alignItems:'center',
+    },
+    class_name:{
+
+    },
+    count_attended_title:{
+        fontWeight:'bold',
+    },
+    count_attended_text:{
+        fontStyle:'italic',
+        textDecorationLine: 'underline',
+        color:'blue',
+    },
+    miss_attended_title:{
         fontWeight:'bold',
     },  
+    miss_attended_text:{
+        fontStyle:'italic',
+        textDecorationLine: 'underline',
+        color:'blue',
+    },
+    view_detail_class:{
+        position:'absolute',
+        marginLeft:85,
+        bottom:5,
+    },
+    view_detail_text:{
+        fontSize:15,
+        fontStyle:'italic',
+        textDecorationLine: 'underline',
+        color:'blue',
+    },
 });

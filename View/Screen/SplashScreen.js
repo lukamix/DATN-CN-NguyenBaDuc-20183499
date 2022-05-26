@@ -15,7 +15,7 @@ class LoadingText extends Component{
     super(props)
     this.state={
       dotText:0,
-      
+      waitingTime:0,
     }
     setInterval(()=>{
       this.setState(previousState=>{
@@ -23,7 +23,7 @@ class LoadingText extends Component{
             return{dotText:previousState.dotText+1}
           }
           else return {dotText:0}
-      })
+      });
     },500);
   }
   componentWillUnmount(){
@@ -42,6 +42,27 @@ class LoadingText extends Component{
   }
 }
 class SplashScreen extends Component {
+    constructor(props){
+      super(props)
+      this.state={
+        waitingTime:0,
+      }
+      let interval = setInterval(()=>{
+        this.setState(previousState=>{
+          if(previousState.waitingTime<5000){
+            return{waitingTime:previousState.waitingTime+500}
+          }});
+        if(this.state.waitingTime>=5000){
+          clearInterval(interval);
+          this.props.navigation.navigate("SignInScreen");
+        };
+      },500);
+    }
+    componentWillUnmount(){
+      this.setState = (state,callback)=>{
+        return;
+      };
+    }
     render() {
       return (
     <SafeAreaView style = {styles.container}>

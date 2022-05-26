@@ -100,8 +100,7 @@ class Attendance extends Component{
                         <View style={styles.header_info}>
                             <Text style={styles.header_title}>Điểm danh sinh viên</Text>
                         </View>
-                        <TouchableOpacity style={styles.header_button}
-                        onPress={() => this.setModalVisible(true)}>
+                        <TouchableOpacity style={styles.header_button}>
                             <Image style={styles.header_button_icon} source={require("../../Resources/Images/Icon/options.png")}/>
                         </TouchableOpacity>
                     </View>

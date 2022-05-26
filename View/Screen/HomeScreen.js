@@ -40,6 +40,7 @@ class HomeScreen extends Component{
 
         }
     };
+    
     render(){
         generateBoxShadowStyle(-2, 4, '#171717', 0.2, 3, 10, '#171717');
         return(
@@ -85,14 +86,24 @@ class HomeScreen extends Component{
                     </View>
                     <View style={styles.box}>
                         <View style={styles.box_item}>
-                            <TouchableOpacity style={[styles.touch_area,styles.boxShadow]}>
+                            <TouchableOpacity style={[styles.touch_area,styles.boxShadow]}
+                             onPress={
+                                ()=>{
+                                    this.props.navigation.navigate("QRCodeScreen");
+                                }}
+                            >
                                 <Image style={styles.icon_item} source={require("../../Resources/Images/Icon/qr-code.png")}/>
                             </TouchableOpacity>
                             <Text style={styles.item_name_text}>QR Code</Text>
                             <Text style={styles.item_name_info}>Quét mã QR để điểm danh</Text>
                         </View>
                         <View style={styles.box_item}>
-                            <TouchableOpacity style={[styles.touch_area,styles.boxShadow]}>
+                            <TouchableOpacity style={[styles.touch_area,styles.boxShadow]}
+                            onPress={
+                                ()=>{
+                                    this.props.navigation.navigate("ClassListScreen");
+                                }}
+                            >
                                 <Image style={styles.icon_item} source={require("../../Resources/Images/Icon/class.png")}/>
                             </TouchableOpacity>
                             <Text style={styles.item_name_text}>Danh sách lớp học</Text>
